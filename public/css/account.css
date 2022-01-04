@@ -1,0 +1,14 @@
+.profile-wrapper .white-wrap {
+    background-color: #fff;
+    padding: 24px;
+    margin-bottom: 24px;
+    position: relative;
+    border-radius: 6px;
+    position: static;
+
+}
+.profile-wrapper .white-wrap.account-details .title {
+    font-size: 20px;
+    color: #434343;
+    padding-bottom: 8px;
+}

@@ -1,0 +1,139 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:  'Open Sans', sans-serif;
+}
+.font_thin{
+    font-weight: 300;
+}
+.nav {
+    position:relative;
+    width: 98vw;
+}
+.nav_list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    margin: 8px 3rem;
+    width: 100%;
+}
+.nav_listlogo {
+    list-style: none;
+    margin-right: auto;
+    cursor: pointer;
+
+}
+.nav_listlogo svg {
+    width: 2.5rem;
+    transition: fill 250ms ease-in;
+}
+.nav_listlogo svg:hover,
+.nav_listlogo svg:focus {
+    fill: #f06292;
+}
+
+.nav_listitem {
+    list-style: none;
+    font-weight: bold;
+    position: relative;
+    padding: 1.5rem 1rem;
+    cursor: pointer;
+}
+.nav_listitem::after {
+    content: "";
+    width: 0;
+    height: 0.3rem;
+    border-radius: 0.2rem;
+    position: absolute;
+    left: 1rem;
+    bottom: 0.8rem;
+    background-color: #C70740;
+    transition: width 200ms ease-in;
+}
+.nav_listitem:hover::after, .nav_listitem:focus::after {
+    width: 80%;
+}
+
+.nav_listitem:hover #ap, .nav_listitem:focus #ap {
+    opacity: 1;
+    visibility: visible;
+}
+.nav_listitemdrop {
+    position: absolute;
+    top: 4rem;
+    left: -1rem;
+    box-shadow: 0 0 10px #e1e5ee;
+    background-color: white;
+    border-radius: 0.2rem;
+    width: 12rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 200ms ease-in-out;
+}
+
+.nav_listitemdrop a {
+    list-style: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+    transition: background-color 200ms ease-in-out;
+}
+.nav_listitemdrop button {
+    list-style: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+    transition: background-color 200ms ease-in-out;
+}
+.nav_listitemdrop #i:hover,.nav_listitemdrop #i:focus {
+    background-color:#F3F3F3;
+}
+a, a:hover, a:visited, a:active{
+    text-decoration: none;
+    color: #212529 ;
+}
+button{
+    text-decoration: none;
+    color: #212529;
+    font-weight: 600;
+    padding: 0;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+}
+
+.cont{
+    position:static;
+}
+
+.login_btn {
+    border-radius: 25px;
+    -webkit-box-shadow: 0 2px 8px 0 rgb(53 64 90 / 20%);
+    box-shadow: 0 2px 8px 0 rgb(53 64 90 / 20%);
+    padding: 6px 30px;
+    background: linear-gradient(to right, #F49521, #DA4C01);
+    color: #FFFFFF !important;
+    font-weight: 600;
+}
+
+.cpright {
+    margin-top: 120px;
+    font-size: 0.9285714285714286rem;
+    line-height: 22px;
+    color: #606060;
+    padding: 15px 0 30px;
+    text-align: center;
+}

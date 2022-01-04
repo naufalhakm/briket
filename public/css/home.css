@@ -1,0 +1,99 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+body{
+    font-family:  'Open Sans', sans-serif;
+}
+.card-body{
+    display: flex;
+}
+.product-list-container{
+    width: 300px;
+    margin-right: 20px;
+    font-weight: 600;
+}
+.item-list{
+    width: 100%;
+}
+.item-logo{
+    width: 18px;
+    margin-right: 8px;
+    padding-top: 4px;
+}
+.product-box{
+    height: 40px;
+    display: flex;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.product-list-container .product-box.active, .product-list-container  .product-box:hover {
+    padding: 6px 3px;
+    border: 2px solid #F49521;
+    border-radius: 5px;
+}
+
+.subtitle{
+    display: inline-block;
+    line-height: 41px;
+    color: #434343;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.title{
+    color: #434343;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.content-form{
+    width: 100%;
+    display: flex;
+    color: #03121a;
+    font-weight: 600;
+}
+.content-form-left{
+    width: 300px;
+}
+
+.form-control{
+    width: 260px;
+}
+.form_sub{
+    display: flex;
+}
+.form_plane{
+    padding: 10px 0px;
+}
+.form_label{
+    padding-bottom: 6px;
+}
+#tanggal{
+    width: 260px;
+}
+#jumlah{
+    width: 260px;
+}
+
+.btn-primary{
+    border-radius: .5rem;
+    background: linear-gradient(to right, #F49521, #DA4C01);
+    border: 0px;
+    font-size: 15px;
+}
+.btn-pad{
+    padding-top: 33px;
+    padding-bottom: 35px;
+    margin-left: 140.5px;
+}
+.ads{
+    border-radius: 0.5rem;
+}
+
+.form-control:focus{
+    border: 1px solid #ced4da;
+    box-shadow: none;
+}

@@ -138,19 +138,19 @@ return [
 
     'custom' => [
         'name' => [
-            'required' => 'Nama harus diisi.',
+            'required' => 'Nama belum diisi.',
         ],
         'email' => [
-            'required' => 'Email harus diisi.',
+            'required' => 'Email belum diisi.',
         ],
         'password' => [
             'required' => 'Kata Sandi harus lebih dari 8 karakter atau lebih.',
         ],
         'phone' => [
-            'required' => 'Nomor ponsel harus diisi.',
+            'required' => 'Nomor ponsel belum diisi.',
         ],
         'address' => [
-            'required' => 'Alamat harus diisi.',
+            'required' => 'Alamat belum diisi.',
         ],
     ],
 

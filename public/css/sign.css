@@ -2,37 +2,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
 /*===== VARIABLES CSS =====*/
 :root{
-  /*===== Colores =====*/
-  --first-color: #1A73E8;
-  --input-color: #80868B;
-  --border-color: #DADCE0;
+    /*===== Colores =====*/
+    --first-color: #1A73E8;
+    --input-color: #80868B;
+    --border-color: #DADCE0;
 
-  /*===== Fuente y tipografia =====*/
-  --body-font:  'Open Sans', sans-serif;
-  --normal-font-size: 1rem;
-  --small-font-size: .75rem;
+    /*===== Fuente y tipografia =====*/
+    --body-font:  'Open Sans', sans-serif;
+    --normal-font-size: 1rem;
+    --small-font-size: .75rem;
 }
 
 /*===== BASE =====*/
 *,::before,::after{
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 body{
-  margin: 0;
-  padding: 0;
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
 }
 .content-briket{
     margin: 20px 0;
     padding-top: 50px;
 }
-a, a:hover, a:visited, a:active{
+.sign, .sign:hover, .sign:visited, .sign:active{
     text-decoration: none;
     color: #F49521;
 }
 h1{
-  margin: 0;
+    margin: 0;
 }
 .font_bold{
     font-weight: 600;
@@ -49,62 +49,87 @@ h1{
 }
 /*===== FORM =====*/
 .l-form{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 .form__div{
-  position: relative;
-  height: 48px;
+    position: relative;
+    height: 48px;
 }
-.form__input{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90%;
-  font-size: var(--normal-font-size);
-  border: 1px solid var(--border-color);
-  border-radius: .5rem;
-  outline: none;
-  padding: 1rem;
-  background: none;
-  z-index: 1;
+.form-control{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    font-size: var(--normal-font-size);
+    border: 1px solid var(--border-color);
+    border-radius: .5rem;
+    outline: none;
+    padding: 1rem;
+    background: none;
+    z-index: 1;
 }
 .form__label{
-  position: absolute;
-  left: 1rem;
-  top: 0.5rem;
-  padding: 0 .25rem;
-  background-color: #fff;
-  color: var(--input-color);
-  font-size: var(--normal-font-size);
-  transition: .3s;
+    position: absolute;
+    left: 1rem;
+    top: 0.5rem;
+    padding: 0 .25rem;
+    background-color: #fff;
+    color: var(--input-color);
+    font-size: var(--normal-font-size);
+    transition: .3s;
 }
 
 /*Input focus move up label*/
-.form__input:focus + .form__label{
-  top: -.5rem;
-  left: .8rem;
-  color: var(--first-color);
-  font-size: var(--small-font-size);
-  font-weight: 500;
-  z-index: 10;
+.form-control:focus + .form__label{
+    top: -.5rem;
+    left: .8rem;
+    color: var(--first-color);
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    z-index: 10;
+
+}
+/*Input error label*/
+.is-invalid+.form__label{
+    color: #f15c59;
+}
+.is-invalid:focus + .form__label {
+    color: #f15c59;
+}
+/* Box error */
+.is-invalid{
+    background-image: none !important;
+}
+.is-invalid:focus{
+    box-shadow: none !important;
 }
 
+/* Error Message */
+.error-message{
+    color: #f15c59;
+    font-size: 12px;
+}
+.error-message li{
+    position: relative;
+    left: -15px;
+}
 /*Input focus sticky top label*/
-.form__input:not(:placeholder-shown).form__input:not(:focus)+ .form__label{
-  top: -.5rem;
-  left: .8rem;
-  font-size: var(--small-font-size);
-  font-weight: 500;
-  z-index: 10;
+.form-control:not(:placeholder-shown).form-control:not(:focus)+ .form__label{
+    top: -.5rem;
+    left: .8rem;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    z-index: 10;
 }
 
 /*Input focus*/
-.form__input:focus{
-  border: 1.5px solid var(--first-color);
+.form-control:focus{
+    border: 1.5px solid var(--first-color);
+    box-shadow: none;
 }
 
 /* Button */
@@ -116,10 +141,10 @@ h1{
 
 /* Image */
 .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 .cpright {
@@ -129,4 +154,12 @@ h1{
     color: #606060;
     padding: 15px 0 30px;
     text-align: center;
+}
+
+.alert{
+    border: 1px solid rgba(255,66,79,.2);
+    font-size: 12px;
+    background-color: rgb(255, 244, 244);
+    font: 'Open Sans', sans-serif;
+    color: #212529;
 }
